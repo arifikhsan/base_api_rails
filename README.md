@@ -1,24 +1,40 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails api for register login logout
 
-Things you may want to cover:
+## register
 
-* Ruby version
+http://localhost:3000/signup
 
-* System dependencies
+{
+    "user": {
+        "email": "a@a.a",
+        "password": "aaaaaa"
+    }
+}
 
-* Configuration
+## login
 
-* Database creation
+http://localhost:3000/login
 
-* Database initialization
+{
+    "user": {
+        "email": "a@a.a",
+        "password": "aaaaaa"
+    }
+}
 
-* How to run the test suite
+it returns authorization key in *header*
 
-* Services (job queues, cache servers, search engines, etc.)
+Authorization →Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY5NzQ1MjUzLCJleHAiOjE1Njk4MzE2NTMsImp0aSI6IjcwZjljYmM2LTJlZTUtNGIzMi1hMDhiLTk1NzU4M2JkNThlMSJ9.beSpKDx-2EXId_u2-OwYLw8sQ7Y_fPUrDl-QFPsxV8I
 
-* Deployment instructions
+## logout
 
-* ...
+http://localhost:3000/logout
+
+Authorization Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY5NzQ1MjUzLCJleHAiOjE1Njk4MzE2NTMsImp0aSI6IjcwZjljYmM2LTJlZTUtNGIzMi1hMDhiLTk1NzU4M2JkNThlMSJ9.beSpKDx-2EXId_u2-OwYLw8sQ7Y_fPUrDl-QFPsxV8I
+
+add row in jwt_blacklists table
+
+## Resources
+
+https://medium.com/@mazik.wyry/rails-5-api-jwt-setup-in-minutes-using-devise-71670fd4ed03
